@@ -2,8 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
-  devtool: "inline-source-map",
   entry: "./web/app.tsx",
   output: {
     path: path.resolve(__dirname, "./public"),
@@ -20,6 +18,6 @@ module.exports = {
     ],
   },
   plugins: [new HtmlWebpackPlugin({
-    templateContent:`<div id="app"></div>`,
+    templateContent: `<div id="app"></div>`,
   })],
 };
