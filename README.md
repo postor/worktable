@@ -90,4 +90,12 @@ lint 提示： `Require statement not part of import statement.eslint@typescript
 npm i webpack webpack-cli react react-dom @types/react @types/react-dom typescript  ts-loader html-webpack-plugin axios  --save-dev
 ```
 
-配置 webpack 和增加 react 代码，详见  [./webpack.config.js](./webpack.config.js) 和 [./web](./web)
+配置 webpack 和增加 react 代码，详见  [./webpack.config.js](./webpack.config.js) 和 [./web](./web)，然后用 webpack --watch 就可以自动重编了（需要的自己配置hot-reload，开发环境自动刷新）
+
+```
+npm run webpack --watch
+```
+
+## 更多
+
+要上产线还要更新 Dockerfile 等，因为很多不是针对 ts 环境的
