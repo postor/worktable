@@ -18,6 +18,6 @@ module.exports = {
     ],
   },
   plugins: [new HtmlWebpackPlugin({
-    templateContent: `<div id="app"></div>`,
+    templateContent: `<html><head></head><body><div id="app"></div></body></html>`,
   })],
 };

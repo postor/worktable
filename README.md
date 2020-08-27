@@ -184,3 +184,5 @@ ingress   moleculer-mongo-react.127.0.0.1.nip.io   localhost   80      93m
 PS D:\study\moleculer-mongo-react> Invoke-RestMethod -Headers @{'Host'='moleculer-mongo-react.127.0.0.1.nip.io'} http://localhost
 <div id="app"></div><script src="main.50e2619038cdd8b5b9cf.js"></script>
 ```
+
+![screenshot](./screenshot.jpg)
