@@ -73,14 +73,19 @@ spec:
     spec:
       containers:
       - name: api
-        image: moleculer-mongo-react
+        image: postor/moleculer-mongo-react
         envFrom:
         - configMapRef:
             name: common-env
         env:
           - name: SERVICES
             value: api
-
+          - name: SERVICEDIR
+            value: dist/services
+          - name: PORT
+            value: "3000"
+        ports:
+          - containerPort: 3000
 ---
 #########################################################
 # Greeter service
@@ -101,13 +106,15 @@ spec:
     spec:
       containers:
       - name: greeter
-        image: moleculer-mongo-react
+        image: postor/moleculer-mongo-react
         envFrom:
         - configMapRef:
             name: common-env
         env:
           - name: SERVICES
             value: greeter
+          - name: SERVICEDIR
+            value: dist/services
 
 ---
 #########################################################
@@ -129,13 +136,15 @@ spec:
     spec:
       containers:
       - name: products
-        image: moleculer-mongo-react
+        image: postor/moleculer-mongo-react
         envFrom:
         - configMapRef:
             name: common-env
         env:
           - name: SERVICES
             value: products
+          - name: SERVICEDIR
+            value: dist/services
 
 ---
 #########################################################
