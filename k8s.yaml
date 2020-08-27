@@ -8,7 +8,7 @@ metadata:
 data:
   NAMESPACE: ""
   LOGLEVEL: info
-  SERVICEDIR: services
+  SERVICEDIR: dist/services
   TRANSPORTER: nats://nats:4222
   
   
@@ -80,8 +80,6 @@ spec:
         env:
           - name: SERVICES
             value: api
-          - name: SERVICEDIR
-            value: dist/services
           - name: PORT
             value: "3000"
         ports:
@@ -113,8 +111,6 @@ spec:
         env:
           - name: SERVICES
             value: greeter
-          - name: SERVICEDIR
-            value: dist/services
 
 ---
 #########################################################
@@ -143,8 +139,6 @@ spec:
         env:
           - name: SERVICES
             value: products
-          - name: SERVICEDIR
-            value: dist/services
 
 ---
 #########################################################
