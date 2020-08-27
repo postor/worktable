@@ -1,4 +1,6 @@
 FROM node:lts-alpine
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk add --no-cache inotify-tools
 # Env
 # ENV NODE_ENV=production
@@ -9,6 +11,7 @@ COPY package.json .
 
 # Install all Packages
 RUN npm install
+
 # Copy all other source code to work directory
 ADD . /usr/src/app
 
